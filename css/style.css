@@ -237,6 +237,38 @@ ul {
     background-color: var(--tag-bg);
 }
 
+/* --- Language Toggle --- */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.lang-toggle__link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.15rem 0.3rem;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+}
+
+.lang-toggle__link:hover {
+    color: var(--accent);
+}
+
+.lang-toggle__link--active {
+    color: var(--accent);
+    pointer-events: none;
+}
+
+.lang-toggle__sep {
+    color: var(--border-color);
+    user-select: none;
+}
+
 /* Light mode: show moon, hide sun */
 .theme-toggle__icon--sun {
     display: none;
