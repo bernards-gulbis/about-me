@@ -237,6 +237,38 @@ ul {
     background-color: var(--tag-bg);
 }
 
+/* --- Language Toggle --- */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.lang-toggle__link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.15rem 0.3rem;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+}
+
+.lang-toggle__link:hover {
+    color: var(--accent);
+}
+
+.lang-toggle__link--active {
+    color: var(--accent);
+    cursor: default;
+}
+
+.lang-toggle__sep {
+    color: var(--border-color);
+    user-select: none;
+}
+
 /* Light mode: show moon, hide sun */
 .theme-toggle__icon--sun {
     display: none;
@@ -424,6 +456,12 @@ ul {
     border-radius: 12px;
     padding: 1.75rem;
     box-shadow: 0 2px 8px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--card-shadow);
 }
 
 .skill-category__header {
@@ -462,8 +500,9 @@ ul {
 }
 
 .tag small {
+    font-size: inherit;
     font-weight: 400;
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 /* ==========================================================================
@@ -596,7 +635,7 @@ ul {
     align-items: center;
     justify-content: center;
     color: var(--accent);
-    left: calc(-2.5rem - 0.3125rem);
+    left: calc(-2.5rem - (1.75rem - 1.125rem) / 2);
     top: 0;
 }
 
@@ -654,6 +693,31 @@ ul {
     height: 6px;
     background: var(--accent);
     border-radius: 50%;
+}
+
+.timeline__highlights a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.timeline__highlights a:hover {
+    text-decoration: underline;
+}
+
+.timeline__highlights a .external-link-icon {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.timeline__highlights a:hover .external-link-icon {
+    opacity: 1;
 }
 
 .timeline__item--education .timeline__content {
@@ -1012,7 +1076,7 @@ button:focus-visible {
     }
 
     .timeline__dot--education {
-        left: calc(-2rem - 0.3125rem);
+        left: calc(-2rem - (1.75rem - 1.125rem) / 2);
     }
 
     .timeline__content {
