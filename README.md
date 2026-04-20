@@ -15,3 +15,7 @@ open index.html
 # or
 python -m http.server 8000
 ```
+
+## License
+
+The source code is released under the [MIT License](LICENSE). Personal content — name, photograph, biography, and work-experience text — is © Bernards Gulbis and is **not** covered by the MIT license. When using this repository as a template, replace the personal content with your own.
