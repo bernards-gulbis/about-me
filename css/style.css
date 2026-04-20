@@ -261,7 +261,7 @@ ul {
 
 .lang-toggle__link--active {
     color: var(--accent);
-    pointer-events: none;
+    cursor: default;
 }
 
 .lang-toggle__sep {
@@ -456,6 +456,12 @@ ul {
     border-radius: 12px;
     padding: 1.75rem;
     box-shadow: 0 2px 8px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--card-shadow);
 }
 
 .skill-category__header {
@@ -494,8 +500,9 @@ ul {
 }
 
 .tag small {
+    font-size: inherit;
     font-weight: 400;
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 /* ==========================================================================
@@ -628,7 +635,7 @@ ul {
     align-items: center;
     justify-content: center;
     color: var(--accent);
-    left: calc(-2.5rem - 0.3125rem);
+    left: calc(-2.5rem - (1.75rem - 1.125rem) / 2);
     top: 0;
 }
 
@@ -1069,7 +1076,7 @@ button:focus-visible {
     }
 
     .timeline__dot--education {
-        left: calc(-2rem - 0.3125rem);
+        left: calc(-2rem - (1.75rem - 1.125rem) / 2);
     }
 
     .timeline__content {
