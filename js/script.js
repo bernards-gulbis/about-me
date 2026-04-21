@@ -67,12 +67,19 @@
     // Close mobile menu when we cross into desktop. Breakpoint mirrors the
     // `@media (max-width: 900px)` rule in css/style.css.
     const desktopQuery = window.matchMedia('(min-width: 901px)');
-    desktopQuery.addEventListener('change', function (e) {
+    const onDesktopCross = function (e) {
         if (e.matches) {
             navLinks.classList.remove('open');
             setHamburgerExpanded(false);
         }
-    });
+    };
+    // `addEventListener` on MediaQueryList is Safari 14+; fall back to the
+    // legacy `addListener` so Safari 13 doesn't throw and abort the IIFE.
+    if (desktopQuery.addEventListener) {
+        desktopQuery.addEventListener('change', onDesktopCross);
+    } else {
+        desktopQuery.addListener(onDesktopCross);
+    }
 
     // Close mobile menu on Escape key
     document.addEventListener('keydown', function (e) {
