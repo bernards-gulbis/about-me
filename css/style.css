@@ -187,6 +187,7 @@ ul {
     position: relative;
     padding-bottom: 0.25rem;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav__link::after {
@@ -807,6 +808,16 @@ a.credentials__name:hover .credentials__link-icon {
    Contact
    ========================================================================== */
 
+/* Fill the viewport below the nav so the last section can scroll up to the
+   scroll-padding-top probe line — keeps the active-nav logic branch-free. */
+#contact {
+    min-height: calc(100vh - 5rem);
+    min-height: calc(100dvh - 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .contact {
     display: flex;
     justify-content: center;
@@ -985,10 +996,10 @@ button:focus-visible {
 }
 
 /* ==========================================================================
-   Responsive: Mobile (max-width: 768px)
+   Responsive: Mobile (max-width: 900px)
    ========================================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .section {
         padding: 3.5rem 0;
     }

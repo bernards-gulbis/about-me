@@ -69,7 +69,7 @@
     window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function () {
-            if (window.innerWidth > 768) {
+            if (window.innerWidth > 900) {
                 navLinks.classList.remove('open');
                 setHamburgerExpanded(false);
             }
@@ -110,6 +110,12 @@
     const navLinksAll = document.querySelectorAll('.nav__link');
     const nav = document.getElementById('nav');
 
+    // Match the CSS scroll-padding-top so the probe line lines up with where
+    // anchor links actually park each section.
+    const scrollPaddingTop =
+        parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) ||
+        nav.offsetHeight;
+
     // Only track sections that have a corresponding nav link
     const navHrefs = {};
     navLinksAll.forEach(function (link) {
@@ -123,7 +129,7 @@
     });
 
     function updateActiveNav() {
-        const scrollPos = window.scrollY + nav.offsetHeight;
+        const scrollPos = window.scrollY + scrollPaddingTop + 1;
         let currentId = '';
 
         trackedSections.forEach(function (section) {
