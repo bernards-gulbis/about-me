@@ -14,11 +14,15 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: var(--nav-offset);
 }
 
 /* --- Light Mode (default) --- */
 :root {
+    /* Height of the fixed nav; JS reads this via scroll-padding-top for the
+       active-nav probe, and #contact subtracts it from the viewport height. */
+    --nav-offset: 5rem;
+
     --bg-primary: #FFF8F0;
     --bg-secondary: #FFF0E0;
     --text-primary: #2D1B14;
@@ -187,6 +191,7 @@ ul {
     position: relative;
     padding-bottom: 0.25rem;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav__link::after {
@@ -807,6 +812,16 @@ a.credentials__name:hover .credentials__link-icon {
    Contact
    ========================================================================== */
 
+/* Fill the viewport below the nav so the last section can scroll up to the
+   scroll-padding-top probe line — keeps the active-nav logic branch-free. */
+#contact {
+    min-height: calc(100vh - var(--nav-offset));
+    min-height: calc(100dvh - var(--nav-offset));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .contact {
     display: flex;
     justify-content: center;
@@ -985,10 +1000,10 @@ button:focus-visible {
 }
 
 /* ==========================================================================
-   Responsive: Mobile (max-width: 768px)
+   Responsive: Mobile (max-width: 900px)
    ========================================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .section {
         padding: 3.5rem 0;
     }

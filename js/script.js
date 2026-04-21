@@ -64,17 +64,22 @@
         });
     });
 
-    // Close mobile menu on resize to desktop (debounced)
-    let resizeTimer;
-    window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () {
-            if (window.innerWidth > 768) {
-                navLinks.classList.remove('open');
-                setHamburgerExpanded(false);
-            }
-        }, 150);
-    });
+    // Close mobile menu when we cross into desktop. Breakpoint mirrors the
+    // `@media (max-width: 900px)` rule in css/style.css.
+    const desktopQuery = window.matchMedia('(min-width: 901px)');
+    const onDesktopCross = function (e) {
+        if (e.matches) {
+            navLinks.classList.remove('open');
+            setHamburgerExpanded(false);
+        }
+    };
+    // `addEventListener` on MediaQueryList is Safari 14+; fall back to the
+    // legacy `addListener` so Safari 13 doesn't throw and abort the IIFE.
+    if (desktopQuery.addEventListener) {
+        desktopQuery.addEventListener('change', onDesktopCross);
+    } else {
+        desktopQuery.addListener(onDesktopCross);
+    }
 
     // Close mobile menu on Escape key
     document.addEventListener('keydown', function (e) {
@@ -110,6 +115,12 @@
     const navLinksAll = document.querySelectorAll('.nav__link');
     const nav = document.getElementById('nav');
 
+    // Match the CSS scroll-padding-top so the probe line lines up with where
+    // anchor links actually park each section.
+    const scrollPaddingTop =
+        parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) ||
+        nav.offsetHeight;
+
     // Only track sections that have a corresponding nav link
     const navHrefs = {};
     navLinksAll.forEach(function (link) {
@@ -122,8 +133,10 @@
         }
     });
 
+    let lastActiveId = '';
+
     function updateActiveNav() {
-        const scrollPos = window.scrollY + nav.offsetHeight;
+        const scrollPos = window.scrollY + scrollPaddingTop + 1;
         let currentId = '';
 
         trackedSections.forEach(function (section) {
@@ -132,11 +145,11 @@
             }
         });
 
+        if (currentId === lastActiveId) return;
+        lastActiveId = currentId;
+
         navLinksAll.forEach(function (link) {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + currentId) {
-                link.classList.add('active');
-            }
+            link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
         });
     }
 
