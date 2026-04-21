@@ -14,11 +14,15 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: var(--nav-offset);
 }
 
 /* --- Light Mode (default) --- */
 :root {
+    /* Height of the fixed nav; JS reads this via scroll-padding-top for the
+       active-nav probe, and #contact subtracts it from the viewport height. */
+    --nav-offset: 5rem;
+
     --bg-primary: #FFF8F0;
     --bg-secondary: #FFF0E0;
     --text-primary: #2D1B14;
@@ -811,8 +815,8 @@ a.credentials__name:hover .credentials__link-icon {
 /* Fill the viewport below the nav so the last section can scroll up to the
    scroll-padding-top probe line — keeps the active-nav logic branch-free. */
 #contact {
-    min-height: calc(100vh - 5rem);
-    min-height: calc(100dvh - 5rem);
+    min-height: calc(100vh - var(--nav-offset));
+    min-height: calc(100dvh - var(--nav-offset));
     display: flex;
     flex-direction: column;
     justify-content: center;

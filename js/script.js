@@ -64,16 +64,14 @@
         });
     });
 
-    // Close mobile menu on resize to desktop (debounced)
-    let resizeTimer;
-    window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () {
-            if (window.innerWidth > 900) {
-                navLinks.classList.remove('open');
-                setHamburgerExpanded(false);
-            }
-        }, 150);
+    // Close mobile menu when we cross into desktop. Breakpoint mirrors the
+    // `@media (max-width: 900px)` rule in css/style.css.
+    const desktopQuery = window.matchMedia('(min-width: 901px)');
+    desktopQuery.addEventListener('change', function (e) {
+        if (e.matches) {
+            navLinks.classList.remove('open');
+            setHamburgerExpanded(false);
+        }
     });
 
     // Close mobile menu on Escape key
