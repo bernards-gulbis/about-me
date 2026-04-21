@@ -128,6 +128,8 @@
         }
     });
 
+    let lastActiveId = '';
+
     function updateActiveNav() {
         const scrollPos = window.scrollY + scrollPaddingTop + 1;
         let currentId = '';
@@ -138,11 +140,11 @@
             }
         });
 
+        if (currentId === lastActiveId) return;
+        lastActiveId = currentId;
+
         navLinksAll.forEach(function (link) {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + currentId) {
-                link.classList.add('active');
-            }
+            link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
         });
     }
 
