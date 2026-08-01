@@ -529,7 +529,6 @@ ul {
     font-size: 0.85rem;
     font-weight: 500;
     border-radius: 20px;
-    white-space: nowrap;
 }
 
 .tag small {
@@ -904,7 +903,8 @@ a.credentials__name:hover .credentials__link-icon {
     border-top: 1px solid var(--border-color);
 }
 
-.footer__text {
+.footer__text,
+.footer__company {
     color: var(--text-secondary);
     font-size: 0.9rem;
     margin-bottom: 0.25rem;
@@ -932,12 +932,6 @@ a.credentials__name:hover .credentials__link-icon {
 .footer__seal:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px var(--card-shadow);
-}
-
-.footer__company {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
 }
 
 /* --- Screen reader only utility --- */
@@ -1162,6 +1156,7 @@ button:focus-visible {
         padding: 1.25rem;
     }
 
+    /* --- Mobile Footer --- */
     /* Height is left to the global `img { height: auto }` so the seal keeps
        its intrinsic 81:90 ratio; a literal 65px would squeeze it by ~0.5px. */
     .footer__seal img {
@@ -1185,13 +1180,6 @@ button:focus-visible {
 
     .stat-card__number {
         font-size: 1.5rem;
-    }
-
-    /* The longest tags (e.g. "Domain-Driven Design (DDD) & Clean Architecture")
-       are wider than the card at this size, and the global `white-space: nowrap`
-       pushed the whole page into horizontal scroll. Let them wrap instead. */
-    .tag {
-        white-space: normal;
     }
 }
 
