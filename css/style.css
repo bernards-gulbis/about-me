@@ -889,6 +889,29 @@ a.credentials__name:hover .credentials__link-icon {
     margin-bottom: 0;
 }
 
+.footer__seal {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 8px;
+    /* Literal white, not var(--card-bg): the seal PNG has an opaque white
+       background baked in, so the frame must stay white in dark mode too. */
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer__seal:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--card-shadow);
+}
+
+.footer__company {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
 /* --- Screen reader only utility --- */
 .sr-only {
     position: absolute;
@@ -1096,6 +1119,12 @@ button:focus-visible {
 
     .timeline__content {
         padding: 1.25rem;
+    }
+
+    /* Height is left to the global `img { height: auto }` so the seal keeps
+       its intrinsic 81:90 ratio; a literal 65px would squeeze it by ~0.5px. */
+    .footer__seal img {
+        width: 58px;
     }
 }
 
