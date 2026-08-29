@@ -540,6 +540,13 @@ ul {
     padding: 1.75rem;
 }
 
+/* Spoken languages are a different kind of list from the four technical cards,
+   so they run full width beneath the 2x2 grid rather than leaving a half-empty
+   cell alongside it. Harmless once `.skills` collapses to one column. */
+.skill-category--languages {
+    grid-column: 1 / -1;
+}
+
 .skill-category__header {
     display: flex;
     align-items: center;
@@ -849,7 +856,7 @@ a.credentials__name:hover {
    ========================================================================== */
 
 /* Fill the viewport below the nav so the last section can scroll up to the
-   scroll-padding-top probe line — keeps the active-nav logic branch-free. */
+   scroll-padding-top probe line - keeps the active-nav logic branch-free. */
 #contact {
     min-height: calc(100vh - var(--nav-offset));
     min-height: calc(100dvh - var(--nav-offset));

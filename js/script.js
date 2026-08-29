@@ -21,7 +21,7 @@
 
     // Sync aria-label on load. The inline <head> script already resolved
     // stored-vs-system preference and wrote it to the element, so read it back
-    // rather than re-deriving it — re-reading localStorage here would duplicate
+    // rather than re-deriving it - re-reading localStorage here would duplicate
     // that rule and, if storage is blocked, throw and abort the whole IIFE.
     setTheme(htmlElement.getAttribute('data-theme'));
 

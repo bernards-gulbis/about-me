@@ -1,4 +1,4 @@
-# Bernards Gulbis — Portfolio Website
+# Bernards Gulbis - Portfolio Website
 
 A single-page portfolio website built with vanilla HTML, CSS, and JavaScript. Features dark/light mode, responsive design, and scroll animations.
 
@@ -18,4 +18,4 @@ python -m http.server 8000
 
 ## License
 
-The source code is released under the [MIT License](LICENSE). Personal content — name, photograph, biography, and work-experience text — is © Bernards Gulbis and is **not** covered by the MIT license. When using this repository as a template, replace the personal content with your own.
+The source code is released under the [MIT License](LICENSE). Personal content - name, photograph, biography, and work-experience text - is © Bernards Gulbis and is **not** covered by the MIT license. When using this repository as a template, replace the personal content with your own.
