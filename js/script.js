@@ -12,14 +12,6 @@
     const htmlElement = document.documentElement;
     const THEME_KEY = 'bg-portfolio-theme';
 
-    function getPreferredTheme() {
-        const stored = localStorage.getItem(THEME_KEY);
-        if (stored) {
-            return stored;
-        }
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-
     function setTheme(theme) {
         htmlElement.setAttribute('data-theme', theme);
         themeToggle.setAttribute('aria-label',
@@ -27,8 +19,11 @@
         );
     }
 
-    // Sync aria-label on load (data-theme already set by inline <head> script)
-    setTheme(getPreferredTheme());
+    // Sync aria-label on load. The inline <head> script already resolved
+    // stored-vs-system preference and wrote it to the element, so read it back
+    // rather than re-deriving it — re-reading localStorage here would duplicate
+    // that rule and, if storage is blocked, throw and abort the whole IIFE.
+    setTheme(htmlElement.getAttribute('data-theme'));
 
     themeToggle.addEventListener('click', function () {
         const newTheme = htmlElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
@@ -43,11 +38,18 @@
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
 
+    const navLinksAll = navLinks.querySelectorAll('.nav__link');
+
     function setHamburgerExpanded(expanded) {
         hamburger.setAttribute('aria-expanded', expanded);
         hamburger.setAttribute('aria-label',
             expanded ? hamburger.dataset.labelClose : hamburger.dataset.labelOpen
         );
+    }
+
+    function closeMenu() {
+        navLinks.classList.remove('open');
+        setHamburgerExpanded(false);
     }
 
     hamburger.addEventListener('click', function () {
@@ -57,11 +59,8 @@
     });
 
     // Close mobile menu when a nav link is clicked
-    navLinks.querySelectorAll('.nav__link').forEach(function (link) {
-        link.addEventListener('click', function () {
-            navLinks.classList.remove('open');
-            setHamburgerExpanded(false);
-        });
+    navLinksAll.forEach(function (link) {
+        link.addEventListener('click', closeMenu);
     });
 
     // Close mobile menu when we cross into desktop. Breakpoint mirrors the
@@ -69,8 +68,7 @@
     const desktopQuery = window.matchMedia('(min-width: 901px)');
     const onDesktopCross = function (e) {
         if (e.matches) {
-            navLinks.classList.remove('open');
-            setHamburgerExpanded(false);
+            closeMenu();
         }
     };
     // `addEventListener` on MediaQueryList is Safari 14+; fall back to the
@@ -84,8 +82,7 @@
     // Close mobile menu on Escape key
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-            navLinks.classList.remove('open');
-            setHamburgerExpanded(false);
+            closeMenu();
             hamburger.focus();
         }
     });
@@ -112,7 +109,6 @@
 
     /* --- Active Nav Link Highlighting --- */
 
-    const navLinksAll = document.querySelectorAll('.nav__link');
     const nav = document.getElementById('nav');
 
     // Match the CSS scroll-padding-top so the probe line lines up with where

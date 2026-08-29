@@ -24,6 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <!-- `defer` keeps end-of-parse execution but lets the preload scanner fetch
+         it immediately, rather than only after ~50 KB of HTML is parsed. -->
+    <script defer src="js/script.js"></script>
     <noscript><style>.reveal, .stagger > * { opacity: 1 !important; transform: none !important; }</style></noscript>
     <script>
     (function() {
@@ -103,7 +106,7 @@
                 <div class="hero__image-wrapper">
                     <picture>
                         <source srcset="assets/img/profile.webp" type="image/webp">
-                        <img src="assets/img/profile.png" alt="Bernards Gulbis, Senior Full-Stack Engineer" class="hero__image" width="280" height="280">
+                        <img src="assets/img/profile.png" alt="Bernards Gulbis, Senior Full-Stack Engineer" class="hero__image" width="280" height="280" fetchpriority="high">
                     </picture>
                 </div>
             </div>
@@ -146,7 +149,7 @@
                     <p class="section__subtitle">Technologies and tools I work with daily</p>
                 </div>
                 <div class="skills stagger">
-                    <!-- Back-end -->
+                    <!-- Backend -->
                     <div class="skill-category">
                         <div class="skill-category__header">
                             <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -158,16 +161,17 @@
                             <h3 class="skill-category__title">Backend &amp; Architecture</h3>
                         </div>
                         <div class="skill-category__tags">
+                            <span class="tag">Microsoft Azure</span>
                             <span class="tag">REST APIs</span>
                             <span class="tag">.NET Core</span>
                             <span class="tag">C#</span>
                             <span class="tag">ASP.NET Core MVC &amp; Web API</span>
                             <span class="tag">SQL Server</span>
-                            <span class="tag">Entity Framework &amp; NHibernate</span>
+                            <span class="tag">Entity Framework Core</span>
                             <span class="tag">Domain-Driven Design (DDD) &amp; Clean Architecture</span>
                         </div>
                     </div>
-                    <!-- Front-end -->
+                    <!-- Frontend -->
                     <div class="skill-category">
                         <div class="skill-category__header">
                             <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -181,11 +185,10 @@
                             <span class="tag">TypeScript</span>
                             <span class="tag">JavaScript</span>
                             <span class="tag">React</span>
-                            <span class="tag">Angular</span>
                             <span class="tag">HTML &amp; CSS</span>
                         </div>
                     </div>
-                    <!-- AI & Tools -->
+                    <!-- DevOps & Tools -->
                     <div class="skill-category">
                         <div class="skill-category__header">
                             <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -203,7 +206,6 @@
                             <h3 class="skill-category__title">DevOps &amp; Tools</h3>
                         </div>
                         <div class="skill-category__tags">
-                            <span class="tag">Microsoft Azure</span>
                             <span class="tag">Azure DevOps</span>
                             <span class="tag">GitHub Copilot</span>
                             <span class="tag">Claude Code</span>
@@ -243,7 +245,7 @@
                 <div class="projects stagger">
                     <div class="project-card">
                         <h3 class="project-card__title">Tapi Home Visits Scheduling</h3>
-                        <p class="project-card__description">Appointment diaries and call centre scheduling for the Home Visits service at Tapi Carpets &amp; Floors &mdash; with route optimization now rolling out across the UK showroom network.</p>
+                        <p class="project-card__description">Appointment diaries and call centre scheduling for the Home Visits service at Tapi Carpets &amp; Floors &mdash; with route optimization now rolling out.</p>
                         <div class="project-card__impact">
                             <span class="project-card__metric">Nationwide UK store network</span>
                         </div>
@@ -418,27 +420,27 @@
                         <ul class="credentials__list" role="list">
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/ssa684zrdvke" target="_blank" rel="noopener noreferrer">AI Capabilities and Limitations (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/ssa684zrdvke" target="_blank" rel="noopener noreferrer">AI Capabilities and Limitations (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/wrxrpf8wua36" target="_blank" rel="noopener noreferrer">AI Fluency: Framework &amp; Foundations (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/wrxrpf8wua36" target="_blank" rel="noopener noreferrer">AI Fluency: Framework &amp; Foundations (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/qh86m37kmm6q" target="_blank" rel="noopener noreferrer">Introduction to Agent Skills (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/qh86m37kmm6q" target="_blank" rel="noopener noreferrer">Introduction to Agent Skills (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/srx2nott9ah3" target="_blank" rel="noopener noreferrer">Introduction to Subagents (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/srx2nott9ah3" target="_blank" rel="noopener noreferrer">Introduction to Subagents (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/ytcch4j3did5" target="_blank" rel="noopener noreferrer">Claude Code in Action (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/ytcch4j3did5" target="_blank" rel="noopener noreferrer">Claude Code in Action (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/4d2aqej3r458" target="_blank" rel="noopener noreferrer">Claude Code 101 (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/4d2aqej3r458" target="_blank" rel="noopener noreferrer">Claude Code 101 (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2025</span>
@@ -446,7 +448,7 @@
                             </li>
                             <li>
                                 <span class="credentials__year">2023</span>
-                                <a class="credentials__name" href="https://www.credly.com/badges/a0c8dd83-7158-483b-9798-73479edd72c0" target="_blank" rel="noopener noreferrer">Microsoft Certified: Azure Fundamentals<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://www.credly.com/badges/a0c8dd83-7158-483b-9798-73479edd72c0" target="_blank" rel="noopener noreferrer">Microsoft Certified: Azure Fundamentals<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                         </ul>
                     </div>
@@ -455,15 +457,15 @@
                         <ul class="credentials__list" role="list">
                             <li>
                                 <span class="credentials__year">2012</span>
-                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=uH6opMlsEcE=&amp;t=1" target="_blank" rel="noopener noreferrer">Advancements of the Topological Functioning Model for Model Driven Architecture Approach<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=uH6opMlsEcE=&amp;t=1" target="_blank" rel="noopener noreferrer">Advancements of the Topological Functioning Model for Model Driven Architecture Approach<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2011</span>
-                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=5UR68TwdpHE=&amp;t=1" target="_blank" rel="noopener noreferrer">Towards the Refinement of Topological Class Diagram as a Platform Independent Model<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=5UR68TwdpHE=&amp;t=1" target="_blank" rel="noopener noreferrer">Towards the Refinement of Topological Class Diagram as a Platform Independent Model<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2011</span>
-                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=cq5BhFT2qug=&amp;t=1" target="_blank" rel="noopener noreferrer">Backward Requirements Traceability within the Topology-based Model Driven Software Development<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=cq5BhFT2qug=&amp;t=1" target="_blank" rel="noopener noreferrer">Backward Requirements Traceability within the Topology-based Model Driven Software Development<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                         </ul>
                     </div>
@@ -472,11 +474,11 @@
                         <ul class="credentials__list" role="list">
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://citofact.com" target="_blank" rel="noopener noreferrer">Citofact &mdash; white-label e-invoicing for Germany, Austria &amp; Switzerland<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://citofact.com" target="_blank" rel="noopener noreferrer">Citofact &mdash; white-label e-invoicing<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://portfolio-tracker-v4.vercel.app" target="_blank" rel="noopener noreferrer">Portfolio Tracker &mdash; investment tracking<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://portfolio-tracker-v4.vercel.app" target="_blank" rel="noopener noreferrer">Portfolio Tracker &mdash; investment tracking<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                         </ul>
                     </div>
@@ -485,7 +487,7 @@
                         <ul class="credentials__list" role="list">
                             <li>
                                 <span class="credentials__year">2015</span>
-                                <a class="credentials__name" href="https://likta.lv/platina-pele/" target="_blank" rel="noopener noreferrer">Plat&#299;na pele 2015 &mdash; Government Solutions (LIKTA)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                                <a class="credentials__name" href="https://likta.lv/platina-pele/" target="_blank" rel="noopener noreferrer">Plat&#299;na pele 2015 &mdash; Government Solutions (LIKTA)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                         </ul>
                     </div>
@@ -548,6 +550,5 @@
             <p class="footer__note">Built with vanilla HTML, CSS &amp; JS</p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>

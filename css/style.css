@@ -45,7 +45,6 @@ html {
     --text-primary: #F5E6D8;
     --text-secondary: #C4A88E;
     --accent: #F07B5C;
-    --accent-hover: #FF9070;
     --gradient-start: #C84E30;
     --gradient-end: #F4845F;
     --nav-bg: rgba(26, 18, 22, 0.95);
@@ -111,6 +110,41 @@ ul {
 
 .section--alt {
     background-color: var(--bg-secondary);
+}
+
+/* --- Shared card surface --- */
+
+/* One definition of the raised-panel look, opted into by each component below.
+   Padding and layout stay with the components; only the surface is shared, so
+   changing the radius or shadow is a single edit rather than five. */
+.stat-card,
+.skill-category,
+.project-card,
+.timeline__content,
+.contact__link {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--card-shadow);
+}
+
+/* `.timeline__content` is deliberately absent: the timeline is a reading
+   surface, not an interactive one, so it takes the panel but not the lift. */
+.stat-card,
+.skill-category,
+.project-card,
+.contact__link,
+.footer__seal {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.stat-card:hover,
+.skill-category:hover,
+.project-card:hover,
+.contact__link:hover,
+.footer__seal:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--card-shadow);
 }
 
 .section__header {
@@ -254,7 +288,6 @@ ul {
 
 .lang-toggle__link {
     color: var(--text-secondary);
-    text-decoration: none;
     padding: 0.15rem 0.3rem;
     border-radius: 4px;
     transition: color 0.2s ease;
@@ -319,7 +352,11 @@ ul {
    ========================================================================== */
 
 .hero {
+    /* `dvh` second so it wins where supported: on mobile `100vh` measures the
+       viewport with browser chrome retracted, pushing the CTA below the fold.
+       Same pair as `#contact`. */
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
@@ -469,18 +506,8 @@ ul {
 }
 
 .stat-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 2px 8px var(--card-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px var(--card-shadow);
 }
 
 .stat-card__number {
@@ -510,17 +537,7 @@ ul {
 }
 
 .skill-category {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
     padding: 1.75rem;
-    box-shadow: 0 2px 8px var(--card-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-category:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px var(--card-shadow);
 }
 
 .skill-category__header {
@@ -574,19 +591,9 @@ ul {
 }
 
 .project-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 2px 8px var(--card-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px var(--card-shadow);
 }
 
 .project-card__title {
@@ -603,7 +610,6 @@ ul {
     font-size: 0.875rem;
     font-weight: 600;
     color: var(--accent);
-    text-decoration: none;
     transition: gap 0.2s ease;
 }
 
@@ -698,11 +704,7 @@ ul {
 }
 
 .timeline__content {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 2px 8px var(--card-shadow);
 }
 
 .timeline__date {
@@ -767,24 +769,10 @@ ul {
     align-items: center;
     gap: 0.3rem;
     color: var(--accent);
-    text-decoration: none;
-    transition: color 0.2s ease;
 }
 
 .timeline__highlights a:hover {
     text-decoration: underline;
-}
-
-.timeline__highlights a .external-link-icon {
-    width: 12px;
-    height: 12px;
-    flex-shrink: 0;
-    opacity: 0.7;
-    transition: opacity 0.2s ease;
-}
-
-.timeline__highlights a:hover .external-link-icon {
-    opacity: 1;
 }
 
 .timeline__item--education .timeline__content {
@@ -850,24 +838,10 @@ a.credentials__name {
     align-items: center;
     gap: 0.4rem;
     color: var(--accent);
-    text-decoration: none;
-    transition: color 0.2s ease;
 }
 
 a.credentials__name:hover {
     text-decoration: underline;
-}
-
-a.credentials__name .credentials__link-icon {
-    width: 14px;
-    height: 14px;
-    flex-shrink: 0;
-    opacity: 0.7;
-    transition: opacity 0.2s ease;
-}
-
-a.credentials__name:hover .credentials__link-icon {
-    opacity: 1;
 }
 
 /* ==========================================================================
@@ -897,17 +871,10 @@ a.credentials__name:hover .credentials__link-icon {
     align-items: center;
     gap: 0.5rem;
     padding: 2rem 2.5rem;
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    box-shadow: 0 2px 8px var(--card-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     min-width: 200px;
 }
 
 .contact__link:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px var(--card-shadow);
     border-color: var(--accent);
 }
 
@@ -961,12 +928,21 @@ a.credentials__name:hover .credentials__link-icon {
     background: #FFFFFF;
     border-radius: 12px;
     box-shadow: 0 2px 8px var(--card-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.footer__seal:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px var(--card-shadow);
+/* --- Shared external-link icon --- */
+
+/* Used by timeline highlights and credentials links alike. Size comes from each
+   SVG's own width/height attributes (12px inline, 14px in credentials) so it
+   isn't stated twice. */
+.external-link-icon {
+    flex-shrink: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+a:hover .external-link-icon {
+    opacity: 1;
 }
 
 /* --- Screen reader only utility --- */
@@ -1038,7 +1014,10 @@ button:focus-visible {
 .stagger.visible > *:nth-child(3) { transition-delay: 100ms; }
 .stagger.visible > *:nth-child(4) { transition-delay: 150ms; }
 .stagger.visible > *:nth-child(5) { transition-delay: 200ms; }
-.stagger.visible > *:nth-child(6) { transition-delay: 250ms; }
+/* `n+6` rather than a literal 6 so containers longer than six children (the
+   timeline already has seven) cap at the last delay instead of falling
+   through to 0ms and revealing out of order. */
+.stagger.visible > *:nth-child(n+6) { transition-delay: 250ms; }
 
 .stagger.visible > * {
     opacity: 1;
