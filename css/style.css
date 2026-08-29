@@ -414,6 +414,32 @@ ul {
     object-position: center top;
 }
 
+/* Scroll cue. The hero is a full 100vh with nothing peeking past the fold, so
+   this marks the edge without competing with the CTA. Sits on the gradient, so
+   it uses translucent white like `.hero__availability` instead of the theme
+   tokens. `.hero` is already `position: relative`. */
+.hero__scroll-cue {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    color: rgba(255, 255, 255, 0.45);
+    transition: color 0.2s ease;
+}
+
+.hero__scroll-cue:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Below 1024px the hero stacks (image above text) and reaches the fold on its
+   own; on short viewports the cue would collide with the CTA. Hide it in both. */
+@media (max-width: 1024px), (max-height: 700px) {
+    .hero__scroll-cue {
+        display: none;
+    }
+}
+
 /* ==========================================================================
    About Me
    ========================================================================== */
