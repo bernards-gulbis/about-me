@@ -729,6 +729,15 @@ ul {
     margin-bottom: 0.75rem;
 }
 
+/* Engagement sub-line, nested inside `.timeline__company` so that block's
+   bottom margin still applies below the pair. Only the contract role uses it. */
+.timeline__engagement {
+    display: block;
+    margin-top: 0.15rem;
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
 .timeline__highlights li {
     position: relative;
     padding-left: 1.25rem;
