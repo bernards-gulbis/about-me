@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bernards Gulbis - Senior Full-Stack Engineer and founder of SIA &ldquo;Gulbis Solutions&rdquo;. .NET Core, C#, React, TypeScript and Azure. Available for contract work, remote across the EU and UK.">
+    <meta name="description" content="Bernards Gulbis - Senior Full-Stack Engineer contracting through Gulbis Solutions. .NET 10, C#, React, TypeScript and Azure. Available for contract work, remote across the EU and UK.">
     <title>Bernards Gulbis | Senior Full-Stack Engineer</title>
     <link rel="canonical" href="https://bg.id.lv/index.html">
     <link rel="alternate" hreflang="en" href="https://bg.id.lv/index.html">
@@ -11,19 +11,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bg.id.lv/index.html">
     <meta property="og:title" content="Bernards Gulbis | Senior Full-Stack Engineer">
-    <meta property="og:description" content="Senior Full-Stack Engineer and founder of SIA &ldquo;Gulbis Solutions&rdquo;. .NET Core, C#, React, TypeScript and Azure. Available for contract work, remote across the EU and UK.">
+    <meta property="og:description" content="Senior Full-Stack Engineer contracting through Gulbis Solutions. .NET 10, C#, React, TypeScript and Azure. Available for contract work, remote across the EU and UK.">
     <meta property="og:image" content="https://bg.id.lv/assets/img/profile.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="lv_LV">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bernards Gulbis | Senior Full-Stack Engineer">
-    <meta name="twitter:description" content="Senior Full-Stack Engineer and founder of SIA &ldquo;Gulbis Solutions&rdquo;. .NET Core, C#, React, TypeScript and Azure. Available for contract work, remote across the EU and UK.">
+    <meta name="twitter:description" content="Senior Full-Stack Engineer contracting through Gulbis Solutions. .NET 10, C#, React, TypeScript and Azure. Available for contract work, remote across the EU and UK.">
     <meta name="twitter:image" content="https://bg.id.lv/assets/img/profile.png">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <!-- `defer` keeps end-of-parse execution but lets the preload scanner fetch
+         it immediately, rather than only after ~50 KB of HTML is parsed. -->
+    <script defer src="js/script.js"></script>
     <noscript><style>.reveal, .stagger > * { opacity: 1 !important; transform: none !important; }</style></noscript>
     <script>
     (function() {
@@ -96,17 +99,21 @@
             <div class="hero__inner container">
                 <div class="hero__content">
                     <h1 class="hero__title">Bernards Gulbis</h1>
-                    <p class="hero__tagline">Senior Full-Stack Engineer | .NET Core, C#, React, TypeScript</p>
+                    <p class="hero__tagline">Senior Full-Stack Engineer | .NET 10, C#, React, TypeScript</p>
                     <p class="hero__availability">Available for contract work &middot; Remote (EU &amp; UK)</p>
                     <a href="#contact" class="hero__cta">Get in touch</a>
                 </div>
                 <div class="hero__image-wrapper">
                     <picture>
                         <source srcset="assets/img/profile.webp" type="image/webp">
-                        <img src="assets/img/profile.png" alt="Bernards Gulbis, Senior Full-Stack Engineer" class="hero__image" width="280" height="280">
+                        <img src="assets/img/profile.png" alt="Bernards Gulbis, Senior Full-Stack Engineer" class="hero__image" width="280" height="280" fetchpriority="high">
                     </picture>
                 </div>
             </div>
+            <a href="#about" class="hero__scroll-cue">
+                <span class="sr-only">Scroll to About</span>
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
         </section>
 
         <!-- About Me -->
@@ -117,18 +124,17 @@
                 </div>
                 <div class="about reveal">
                     <div class="about__text">
-                        <p>I turn complex architecture into production-ready software that ships. With an MSc in Computer Science and 15 years in enterprise development, I bring a system-first mindset to every codebase I touch.</p>
-                        <p>I run SIA &ldquo;Gulbis Solutions&rdquo;, an independent software consultancy based in Riga. I&rsquo;m currently contracted by Tapi Carpets &amp; Floors in the UK, building the scheduling and route optimization systems behind their Home Visits service&mdash;call centre appointment planning and daily routing for home consultants across Tapi&rsquo;s UK showroom network.</p>
-                        <p>I build enterprise-grade applications on Azure, combining robust .NET Core and Entity Framework Core backends with React and TypeScript frontends, delivered through Azure DevOps. As a firm believer in Domain-Driven Design (DDD) and Clean Architecture, I write secure, testable, and maintainable code&mdash;and I use modern AI tools like GitHub Copilot and Claude to accelerate delivery without compromising architectural integrity.</p>
+                        <p>I build software that institutions depend on: systems that carry regulatory weight, outlive the teams that build them, and can&rsquo;t be taken offline for a weekend. That has meant Latvia&rsquo;s national tax filing platform, a healthcare logistics platform rebuilt for the Swedish market, the patient records behind Norway&rsquo;s children&rsquo;s health stations &mdash; and now the scheduling behind a UK retailer&rsquo;s home visits.</p>
+                        <p>Most of what I&rsquo;m hired for is integration and modernization: making systems talk that were never designed to, and moving legacy platforms onto Azure without disrupting the people using them. I hold an MSc in Computer Science, apply Domain-Driven Design and Clean Architecture where they earn their keep, and work AI-assisted day to day &mdash; reviewing that output as critically as any other contributor&rsquo;s.</p>
                     </div>
                     <div class="about__stats stagger">
                         <div class="stat-card">
                             <span class="stat-card__number">15+</span>
-                            <span class="stat-card__label">Years Experience</span>
+                            <span class="stat-card__label">Years of software engineering</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-card__number">4</span>
-                            <span class="stat-card__label">Countries</span>
+                            <span class="stat-card__label">Countries with live systems deployed</span>
                         </div>
                     </div>
                 </div>
@@ -143,7 +149,7 @@
                     <p class="section__subtitle">Technologies and tools I work with daily</p>
                 </div>
                 <div class="skills stagger">
-                    <!-- Back-end -->
+                    <!-- Backend & Data -->
                     <div class="skill-category">
                         <div class="skill-category__header">
                             <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -152,19 +158,18 @@
                                 <line x1="6" y1="6" x2="6.01" y2="6"></line>
                                 <line x1="6" y1="18" x2="6.01" y2="18"></line>
                             </svg>
-                            <h3 class="skill-category__title">Backend &amp; Architecture</h3>
+                            <h3 class="skill-category__title">Backend &amp; Data</h3>
                         </div>
                         <div class="skill-category__tags">
-                            <span class="tag">REST APIs</span>
-                            <span class="tag">.NET Core</span>
                             <span class="tag">C#</span>
-                            <span class="tag">ASP.NET Core MVC &amp; Web API</span>
+                            <span class="tag">.NET 10</span>
+                            <span class="tag">ASP.NET Core</span>
+                            <span class="tag">Entity Framework Core</span>
                             <span class="tag">SQL Server</span>
-                            <span class="tag">Entity Framework &amp; NHibernate</span>
-                            <span class="tag">Domain-Driven Design (DDD) &amp; Clean Architecture</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">xUnit</span>
                         </div>
-                    </div>
-                    <!-- Front-end -->
+                    </div>                    <!-- Frontend -->
                     <div class="skill-category">
                         <div class="skill-category__header">
                             <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -178,11 +183,12 @@
                             <span class="tag">TypeScript</span>
                             <span class="tag">JavaScript</span>
                             <span class="tag">React</span>
-                            <span class="tag">Angular</span>
+                            <span class="tag">TanStack Query</span>
                             <span class="tag">HTML &amp; CSS</span>
+                            <span class="tag">Accessibility (WCAG)</span>
+                            <span class="tag">Playwright</span>
                         </div>
-                    </div>
-                    <!-- AI & Tools -->
+                    </div>                    <!-- Cloud & DevOps -->
                     <div class="skill-category">
                         <div class="skill-category__header">
                             <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -197,20 +203,38 @@
                                 <line x1="1" y1="9" x2="4" y2="9"></line>
                                 <line x1="1" y1="14" x2="4" y2="14"></line>
                             </svg>
-                            <h3 class="skill-category__title">DevOps &amp; Tools</h3>
+                            <h3 class="skill-category__title">Cloud &amp; DevOps</h3>
                         </div>
                         <div class="skill-category__tags">
                             <span class="tag">Microsoft Azure</span>
-                            <span class="tag">Azure DevOps</span>
-                            <span class="tag">GitHub Copilot</span>
+                            <span class="tag">Azure Functions &amp; App Service</span>
+                            <span class="tag">Service Bus &amp; Key Vault</span>
+                            <span class="tag">Application Insights</span>
+                            <span class="tag">Azure DevOps &amp; CI/CD</span>
+                            <span class="tag">Docker</span>
                             <span class="tag">Claude Code</span>
-                            <span class="tag">CI/CD</span>
-                            <span class="tag">Git</span>
-                            <span class="tag">Playwright</span>
                         </div>
-                    </div>
-                    <!-- Languages -->
+                    </div>                    <!-- Architecture & Integration -->
                     <div class="skill-category">
+                        <div class="skill-category__header">
+                            <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                            <h3 class="skill-category__title">Architecture &amp; Integration</h3>
+                        </div>
+                        <div class="skill-category__tags">
+                            <span class="tag">Domain-Driven Design</span>
+                            <span class="tag">Clean Architecture</span>
+                            <span class="tag">OAuth 2.0 / OpenID Connect</span>
+                            <span class="tag">System Integration</span>
+                            <span class="tag">Legacy Modernization</span>
+                        </div>
+                    </div>                    <!-- Languages -->
+                    <div class="skill-category skill-category--languages">
                         <div class="skill-category__header">
                             <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="12" r="10"></circle>
@@ -235,21 +259,21 @@
             <div class="container">
                 <div class="section__header reveal">
                     <h2 class="section__title">Portfolio</h2>
-                    <p class="section__subtitle">Key projects that delivered measurable impact</p>
+                    <p class="section__subtitle">Systems in production across the UK, Norway, Sweden and Latvia</p>
                 </div>
                 <div class="projects stagger">
                     <div class="project-card">
-                        <h3 class="project-card__title">Tapi Home Visits Scheduling &amp; Routing</h3>
-                        <p class="project-card__description">Scheduling and route optimization for the Home Visits service at Tapi Carpets &amp; Floors &mdash; planning call centre appointment schedules and daily routes for home flooring consultants across the UK showroom network.</p>
+                        <h3 class="project-card__title">Tapi Home Visits Scheduling</h3>
+                        <p class="project-card__description">Appointment diaries and call centre scheduling for the Home Visits service at Tapi Carpets &amp; Floors &mdash; with route optimization now rolling out.</p>
                         <div class="project-card__impact">
                             <span class="project-card__metric">Nationwide UK store network</span>
                         </div>
                         <div class="project-card__tags">
                             <span class="tag">Azure</span>
-                            <span class="tag">.NET Core</span>
-                            <span class="tag">Route Optimization</span>
+                            <span class="tag">.NET 10</span>
+                            <span class="tag">Scheduling</span>
                         </div>
-                        <a class="project-card__link" href="https://www.tapi.co.uk/" target="_blank" rel="noopener noreferrer">View Project <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg><span class="sr-only">(opens in new tab)</span></a>
+                        <a class="project-card__link" href="https://www.tapi.co.uk/book-a-home-visit" target="_blank" rel="noopener noreferrer">View Project <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg><span class="sr-only">(opens in new tab)</span></a>
                     </div>
                     <div class="project-card">
                         <h3 class="project-card__title">Norwegian Children&rsquo;s Clinic Platform</h3>
@@ -265,7 +289,7 @@
                         <a class="project-card__link" href="https://minflyt.no/journalsystem/helsestasjon" target="_blank" rel="noopener noreferrer">View Project <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg><span class="sr-only">(opens in new tab)</span></a>
                     </div>
                     <div class="project-card">
-                        <h3 class="project-card__title">Legacy Logistics Platform Modernization</h3>
+                        <h3 class="project-card__title">WebSesam Healthcare Logistics</h3>
                         <p class="project-card__description">Rebuilt a legacy healthcare logistics platform into a modern .NET Core and Angular application, delivering a new product to the Swedish market.</p>
                         <div class="project-card__impact">
                             <span class="project-card__metric">Achieved 90% market share in Sweden</span>
@@ -279,7 +303,7 @@
                     </div>
                     <div class="project-card">
                         <h3 class="project-card__title">Electronic Declaration System (Latvia)</h3>
-                        <p class="project-card__description">Co-developed and maintained the national Electronic Declaration System for the State Revenue Service of Latvia.</p>
+                        <p class="project-card__description">The national platform for submitting and processing tax declarations, built for Latvia&rsquo;s State Revenue Service.</p>
                         <div class="project-card__impact">
                             <span class="project-card__metric">Used by every Latvian taxpayer and employer</span>
                         </div>
@@ -300,17 +324,17 @@
                     <h2 class="section__title">Experience</h2>
                 </div>
                 <div class="timeline stagger">
-                    <!-- Gulbis Solutions -->
+                    <!-- Tapi Carpets & Floors -->
                     <div class="timeline__item">
                         <div class="timeline__dot"></div>
                         <div class="timeline__content">
                             <span class="timeline__date">2026&ndash;Present</span>
-                            <h3 class="timeline__title">Senior Full-Stack Engineer &amp; Founder</h3>
-                            <span class="timeline__company">SIA &ldquo;Gulbis Solutions&rdquo; &middot; Riga, Latvia (Remote)</span>
+                            <h3 class="timeline__title">Senior Full-Stack Engineer</h3>
+                            <span class="timeline__company">Tapi Carpets &amp; Floors (UK) &middot; Riga, Latvia (Remote)<small class="timeline__engagement">contract via Gulbis Solutions</small></span>
                             <ul class="timeline__highlights" role="list">
-                                <li>Founded an independent software consultancy delivering contract engineering for international clients.</li>
-                                <li>Building the scheduling and route optimization systems for the Home Visits department at <a href="https://www.tapi.co.uk/" target="_blank" rel="noopener noreferrer">Tapi Carpets &amp; Floors<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a> (UK) &mdash; call centre appointment planning and daily routing for home consultants across the UK showroom network.</li>
-                                <li>Delivering on Azure with .NET Core, Entity Framework Core, and React, managed through Azure DevOps.</li>
+                                <li>Building the appointment diaries and call centre application for the Home Visits department across the UK showroom network.</li>
+                                <li>Piloting routing integration with the <a href="https://www.skedulo.com/" target="_blank" rel="noopener noreferrer">Skedulo<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a> field service scheduling platform, feeding optimized daily routes through to consultants in the field.</li>
+                                <li>Delivering on Azure with .NET 10, Entity Framework Core, and React, managed through Azure DevOps.</li>
                             </ul>
                         </div>
                     </div>
@@ -320,7 +344,7 @@
                         <div class="timeline__content">
                             <span class="timeline__date">2024&ndash;2026</span>
                             <h3 class="timeline__title">Senior Software Developer</h3>
-                            <span class="timeline__company">Visma Flyt &middot; Riga, Latvia</span>
+                            <span class="timeline__company">Visma Flyt (Norway) &middot; Riga, Latvia (Hybrid)</span>
                             <ul class="timeline__highlights" role="list">
                                 <li>Delivered the <a href="https://www.helsenorge.no/en/pregnancy-and-maternity-care-in-norway/antenatal-health-card/" target="_blank" rel="noopener noreferrer">Digital Pregnancy Card<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a> integration, connecting prenatal care records to the national Helsenorge portal.</li>
                                 <li>Delivered the migration to Norway&rsquo;s new national population registry (<a href="https://www.nhn.no/tjenester/persontjenesten" target="_blank" rel="noopener noreferrer">Persontjenesten<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>), ensuring uninterrupted patient identification across the platform.</li>
@@ -335,7 +359,7 @@
                         <div class="timeline__content">
                             <span class="timeline__date">2018&ndash;2024</span>
                             <h3 class="timeline__title">Senior Software Developer</h3>
-                            <span class="timeline__company">Visma Publitech &middot; Riga, Latvia</span>
+                            <span class="timeline__company">Visma Publitech (Sweden) &middot; Riga, Latvia (Hybrid)</span>
                             <ul class="timeline__highlights" role="list">
                                 <li>Built a real-time warehouse data dashboard using React and .NET API.</li>
                                 <li>Rewrote the legacy WebSesam application into a modern, responsive Angular and .NET SPA&mdash;achieving 90% market share in Sweden.</li>
@@ -415,27 +439,27 @@
                         <ul class="credentials__list" role="list">
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/ssa684zrdvke" target="_blank" rel="noopener noreferrer">AI Capabilities and Limitations (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/ssa684zrdvke" target="_blank" rel="noopener noreferrer">AI Capabilities and Limitations (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/wrxrpf8wua36" target="_blank" rel="noopener noreferrer">AI Fluency: Framework &amp; Foundations (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/wrxrpf8wua36" target="_blank" rel="noopener noreferrer">AI Fluency: Framework &amp; Foundations (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/qh86m37kmm6q" target="_blank" rel="noopener noreferrer">Introduction to Agent Skills (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/qh86m37kmm6q" target="_blank" rel="noopener noreferrer">Introduction to Agent Skills (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/srx2nott9ah3" target="_blank" rel="noopener noreferrer">Introduction to Subagents (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/srx2nott9ah3" target="_blank" rel="noopener noreferrer">Introduction to Subagents (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/ytcch4j3did5" target="_blank" rel="noopener noreferrer">Claude Code in Action (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/ytcch4j3did5" target="_blank" rel="noopener noreferrer">Claude Code in Action (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/4d2aqej3r458" target="_blank" rel="noopener noreferrer">Claude Code 101 (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/4d2aqej3r458" target="_blank" rel="noopener noreferrer">Claude Code 101 (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2025</span>
@@ -443,16 +467,7 @@
                             </li>
                             <li>
                                 <span class="credentials__year">2023</span>
-                                <a class="credentials__name" href="https://www.credly.com/badges/a0c8dd83-7158-483b-9798-73479edd72c0" target="_blank" rel="noopener noreferrer">Microsoft Certified: Azure Fundamentals<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="credentials__group">
-                        <h3 class="credentials__heading">Awards</h3>
-                        <ul class="credentials__list" role="list">
-                            <li>
-                                <span class="credentials__year">2015</span>
-                                <a class="credentials__name" href="https://likta.lv/platina-pele/" target="_blank" rel="noopener noreferrer">Plat&#299;na pele 2015 &mdash; Government Solutions (LIKTA)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://www.credly.com/badges/a0c8dd83-7158-483b-9798-73479edd72c0" target="_blank" rel="noopener noreferrer">Microsoft Certified: Azure Fundamentals<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                         </ul>
                     </div>
@@ -461,15 +476,37 @@
                         <ul class="credentials__list" role="list">
                             <li>
                                 <span class="credentials__year">2012</span>
-                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=uH6opMlsEcE=&amp;t=1" target="_blank" rel="noopener noreferrer">Advancements of the Topological Functioning Model for Model Driven Architecture Approach<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=uH6opMlsEcE=&amp;t=1" target="_blank" rel="noopener noreferrer">Advancements of the Topological Functioning Model for Model Driven Architecture Approach<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2011</span>
-                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=5UR68TwdpHE=&amp;t=1" target="_blank" rel="noopener noreferrer">Towards the Refinement of Topological Class Diagram as a Platform Independent Model<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=5UR68TwdpHE=&amp;t=1" target="_blank" rel="noopener noreferrer">Towards the Refinement of Topological Class Diagram as a Platform Independent Model<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2011</span>
-                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=cq5BhFT2qug=&amp;t=1" target="_blank" rel="noopener noreferrer">Backward Requirements Traceability within the Topology-based Model Driven Software Development<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=cq5BhFT2qug=&amp;t=1" target="_blank" rel="noopener noreferrer">Backward Requirements Traceability within the Topology-based Model Driven Software Development<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="credentials__group">
+                        <h3 class="credentials__heading">Side Projects</h3>
+                        <ul class="credentials__list" role="list">
+                            <li>
+                                <span class="credentials__year">2026</span>
+                                <a class="credentials__name" href="https://citofact.com" target="_blank" rel="noopener noreferrer">Citofact &mdash; white-label e-invoicing<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                            </li>
+                            <li>
+                                <span class="credentials__year">2026</span>
+                                <a class="credentials__name" href="https://portfolio-tracker-v4.vercel.app" target="_blank" rel="noopener noreferrer">Portfolio Tracker &mdash; investment tracking<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="credentials__group">
+                        <h3 class="credentials__heading">Awards</h3>
+                        <ul class="credentials__list" role="list">
+                            <li>
+                                <span class="credentials__year">2015</span>
+                                <a class="credentials__name" href="https://likta.lv/platina-pele/" target="_blank" rel="noopener noreferrer">Plat&#299;na pele 2015 &mdash; Government Solutions (LIKTA)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(opens in new tab)</span></a>
                             </li>
                         </ul>
                     </div>
@@ -532,6 +569,5 @@
             <p class="footer__note">Built with vanilla HTML, CSS &amp; JS</p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>

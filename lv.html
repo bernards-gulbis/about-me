@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bernards Gulbis - Vecākais full-stack programmētājs un SIA &bdquo;Gulbis Solutions&ldquo; dibinātājs. .NET Core, C#, React, TypeScript un Azure. Pieejams līgumdarbiem attālināti ES un Lielbritānijā.">
+    <meta name="description" content="Bernards Gulbis - Vecākais full-stack programmētājs, kas līgumdarbus veic caur Gulbis Solutions. .NET 10, C#, React, TypeScript un Azure. Pieejams līgumdarbiem attālināti ES un Lielbritānijā.">
     <title>Bernards Gulbis | Vecākais full-stack programmētājs</title>
     <link rel="canonical" href="https://bg.id.lv/lv.html">
     <link rel="alternate" hreflang="en" href="https://bg.id.lv/index.html">
@@ -11,19 +11,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bg.id.lv/lv.html">
     <meta property="og:title" content="Bernards Gulbis | Vecākais full-stack programmētājs">
-    <meta property="og:description" content="Vecākais full-stack programmētājs un SIA &bdquo;Gulbis Solutions&ldquo; dibinātājs. .NET Core, C#, React, TypeScript un Azure. Pieejams līgumdarbiem attālināti ES un Lielbritānijā.">
+    <meta property="og:description" content="Vecākais full-stack programmētājs, kas līgumdarbus veic caur Gulbis Solutions. .NET 10, C#, React, TypeScript un Azure. Pieejams līgumdarbiem attālināti ES un Lielbritānijā.">
     <meta property="og:image" content="https://bg.id.lv/assets/img/profile.png">
     <meta property="og:locale" content="lv_LV">
     <meta property="og:locale:alternate" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bernards Gulbis | Vecākais full-stack programmētājs">
-    <meta name="twitter:description" content="Vecākais full-stack programmētājs un SIA &bdquo;Gulbis Solutions&ldquo; dibinātājs. .NET Core, C#, React, TypeScript un Azure. Pieejams līgumdarbiem attālināti ES un Lielbritānijā.">
+    <meta name="twitter:description" content="Vecākais full-stack programmētājs, kas līgumdarbus veic caur Gulbis Solutions. .NET 10, C#, React, TypeScript un Azure. Pieejams līgumdarbiem attālināti ES un Lielbritānijā.">
     <meta name="twitter:image" content="https://bg.id.lv/assets/img/profile.png">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <!-- `defer` keeps end-of-parse execution but lets the preload scanner fetch
+         it immediately, rather than only after ~50 KB of HTML is parsed. -->
+    <script defer src="js/script.js"></script>
     <noscript><style>.reveal, .stagger > * { opacity: 1 !important; transform: none !important; }</style></noscript>
     <script>
     (function() {
@@ -96,17 +99,21 @@
             <div class="hero__inner container">
                 <div class="hero__content">
                     <h1 class="hero__title">Bernards Gulbis</h1>
-                    <p class="hero__tagline">Vecākais full-stack programmētājs | .NET Core, C#, React, TypeScript</p>
+                    <p class="hero__tagline">Vecākais full-stack programmētājs | .NET 10, C#, React, TypeScript</p>
                     <p class="hero__availability">Pieejams līgumdarbiem &middot; Attālināti (ES un Lielbritānija)</p>
                     <a href="#contact" class="hero__cta">Sazināties</a>
                 </div>
                 <div class="hero__image-wrapper">
                     <picture>
                         <source srcset="assets/img/profile.webp" type="image/webp">
-                        <img src="assets/img/profile.png" alt="Bernards Gulbis, vecākais full-stack programmētājs" class="hero__image" width="280" height="280">
+                        <img src="assets/img/profile.png" alt="Bernards Gulbis, vecākais full-stack programmētājs" class="hero__image" width="280" height="280" fetchpriority="high">
                     </picture>
                 </div>
             </div>
+            <a href="#about" class="hero__scroll-cue">
+                <span class="sr-only">Ritināt uz sadaļu &bdquo;Par mani&ldquo;</span>
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
         </section>
 
         <!-- About Me -->
@@ -117,18 +124,17 @@
                 </div>
                 <div class="about reveal">
                     <div class="about__text">
-                        <p>Pārvēršu sarežģītu arhitektūru reālos, strādājošos risinājumos. Ar maģistra grādu datorzinātnēs un 15 gadu pieredzi uzņēmumu sistēmu izstrādē katrai kodu bāzei pieeju ar sistēmas līmeņa redzējumu.</p>
-                        <p>Vadu SIA &bdquo;Gulbis Solutions&ldquo; &mdash; neatkarīgu programmatūras izstrādes uzņēmumu Rīgā. Pašlaik pēc līguma strādāju ar Tapi Carpets &amp; Floors Lielbritānijā, izstrādājot plānošanas un maršrutu optimizācijas sistēmas to mājas vizīšu pakalpojumam &mdash; zvanu centra tikšanos plānošanu un ikdienas maršrutus mājas konsultantiem visā Tapi Lielbritānijas veikalu tīklā.</p>
-                        <p>Veidoju uzņēmuma līmeņa (enterprise) lietojumprogrammas Azure vidē, apvienojot jaudīgu .NET Core un Entity Framework Core aizmugursistēmu ar React un TypeScript priekšgalsistēmu, izstrādi vadot Azure DevOps. Es stingri ievēroju domēnvadītās izstrādes (DDD) un Tīrās arhitektūras (Clean Architecture) principus, kas ļauj man rakstīt drošu, testējamu un uzturamu kodu. Lai paātrinātu izstrādes procesu, nezaudējot arhitektūras kvalitāti, savā ikdienā aktīvi integrēju mūsdienīgus mākslīgā intelekta rīkus, piemēram, GitHub Copilot un Claude.</p>
+                        <p>Veidoju programmatūru, uz kuru paļaujas iestādes: sistēmas ar regulatīvu nozīmi, kas kalpo ilgāk nekā komandas, kuras tās izveidojušas, un kuras nevar vienkārši uz nedēļas nogali atslēgt. Tā ir bijusi Latvijas valsts nodokļu deklarēšanas platforma, veselības aprūpes loģistikas platforma, kas pārbūvēta Zviedrijas tirgum, pacientu dati Norvēģijas bērnu veselības stacijās &mdash; un tagad plānošana kāda Lielbritānijas mazumtirgotāja mājas vizītēm.</p>
+                        <p>Lielākoties mani piesaista integrācijai un modernizācijai: panākt, lai savstarpēji sarunājas sistēmas, kas tam nekad nav bijušas paredzētas, un pārcelt mantotās platformas uz Azure, netraucējot cilvēkiem, kuri tās lieto. Man ir maģistra grāds datorzinātnēs, domēnvadītās izstrādes (DDD) un Tīrās arhitektūras principus piemēroju tur, kur tie sevi attaisno, un ikdienā strādāju ar mākslīgā intelekta atbalstu &mdash; tā rezultātus pārskatot tikpat kritiski kā jebkura cita līdzstrādnieka darbu.</p>
                     </div>
                     <div class="about__stats stagger">
                         <div class="stat-card">
                             <span class="stat-card__number">15+</span>
-                            <span class="stat-card__label">Gadu pieredze</span>
+                            <span class="stat-card__label">Gadi programmatūras inženierijā</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-card__number">4</span>
-                            <span class="stat-card__label">Tirgi</span>
+                            <span class="stat-card__label">Valstis ar ieviestām aktīvām sistēmām</span>
                         </div>
                     </div>
                 </div>
@@ -143,7 +149,7 @@
                     <p class="section__subtitle">Tehnoloģijas un rīki, ar kuriem strādāju ikdienā</p>
                 </div>
                 <div class="skills stagger">
-                    <!-- Back-end -->
+                    <!-- Backend & Data -->
                     <div class="skill-category">
                         <div class="skill-category__header">
                             <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -152,19 +158,18 @@
                                 <line x1="6" y1="6" x2="6.01" y2="6"></line>
                                 <line x1="6" y1="18" x2="6.01" y2="18"></line>
                             </svg>
-                            <h3 class="skill-category__title">Aizmugursistēma un arhitektūra</h3>
+                            <h3 class="skill-category__title">Aizmugursistēma un dati</h3>
                         </div>
                         <div class="skill-category__tags">
-                            <span class="tag">REST APIs</span>
-                            <span class="tag">.NET Core</span>
                             <span class="tag">C#</span>
-                            <span class="tag">ASP.NET Core MVC &amp; Web API</span>
+                            <span class="tag">.NET 10</span>
+                            <span class="tag">ASP.NET Core</span>
+                            <span class="tag">Entity Framework Core</span>
                             <span class="tag">SQL Server</span>
-                            <span class="tag">Entity Framework &amp; NHibernate</span>
-                            <span class="tag">Domain-Driven Design (DDD) &amp; Clean Architecture</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">xUnit</span>
                         </div>
-                    </div>
-                    <!-- Front-end -->
+                    </div>                    <!-- Frontend -->
                     <div class="skill-category">
                         <div class="skill-category__header">
                             <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -178,11 +183,12 @@
                             <span class="tag">TypeScript</span>
                             <span class="tag">JavaScript</span>
                             <span class="tag">React</span>
-                            <span class="tag">Angular</span>
+                            <span class="tag">TanStack Query</span>
                             <span class="tag">HTML &amp; CSS</span>
+                            <span class="tag">Pieejamība (WCAG)</span>
+                            <span class="tag">Playwright</span>
                         </div>
-                    </div>
-                    <!-- AI & Tools -->
+                    </div>                    <!-- Cloud & DevOps -->
                     <div class="skill-category">
                         <div class="skill-category__header">
                             <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -197,20 +203,38 @@
                                 <line x1="1" y1="9" x2="4" y2="9"></line>
                                 <line x1="1" y1="14" x2="4" y2="14"></line>
                             </svg>
-                            <h3 class="skill-category__title">DevOps un rīki</h3>
+                            <h3 class="skill-category__title">Mākonis un DevOps</h3>
                         </div>
                         <div class="skill-category__tags">
                             <span class="tag">Microsoft Azure</span>
-                            <span class="tag">Azure DevOps</span>
-                            <span class="tag">GitHub Copilot</span>
+                            <span class="tag">Azure Functions &amp; App Service</span>
+                            <span class="tag">Service Bus &amp; Key Vault</span>
+                            <span class="tag">Application Insights</span>
+                            <span class="tag">Azure DevOps &amp; CI/CD</span>
+                            <span class="tag">Docker</span>
                             <span class="tag">Claude Code</span>
-                            <span class="tag">CI/CD</span>
-                            <span class="tag">Git</span>
-                            <span class="tag">Playwright</span>
                         </div>
-                    </div>
-                    <!-- Languages -->
+                    </div>                    <!-- Architecture & Integration -->
                     <div class="skill-category">
+                        <div class="skill-category__header">
+                            <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                            <h3 class="skill-category__title">Arhitektūra un integrācija</h3>
+                        </div>
+                        <div class="skill-category__tags">
+                            <span class="tag">Domain-Driven Design</span>
+                            <span class="tag">Clean Architecture</span>
+                            <span class="tag">OAuth 2.0 / OpenID Connect</span>
+                            <span class="tag">Sistēmu integrācija</span>
+                            <span class="tag">Mantoto sistēmu modernizācija</span>
+                        </div>
+                    </div>                    <!-- Languages -->
+                    <div class="skill-category skill-category--languages">
                         <div class="skill-category__header">
                             <svg class="skill-category__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="12" r="10"></circle>
@@ -235,25 +259,25 @@
             <div class="container">
                 <div class="section__header reveal">
                     <h2 class="section__title">Portfolio</h2>
-                    <p class="section__subtitle">Galvenie projekti ar izmērāmu ietekmi</p>
+                    <p class="section__subtitle">Sistēmas ekspluatācijā Lielbritānijā, Norvēģijā, Zviedrijā un Latvijā</p>
                 </div>
                 <div class="projects stagger">
                     <div class="project-card">
-                        <h3 class="project-card__title">Tapi mājas vizīšu plānošana un maršrutu optimizācija</h3>
-                        <p class="project-card__description">Plānošanas un maršrutu optimizācijas sistēma Tapi Carpets &amp; Floors mājas vizīšu pakalpojumam &mdash; zvanu centra tikšanos grafiku un ikdienas maršrutu plānošana mājas grīdas segumu konsultantiem visā Lielbritānijas veikalu tīklā.</p>
+                        <h3 class="project-card__title">Tapi mājas vizīšu plānošana</h3>
+                        <p class="project-card__description">Tikšanos kalendāri un zvanu centra plānošana Tapi Carpets &amp; Floors mājas vizīšu pakalpojumam &mdash; ar maršrutu optimizāciju, kas pašlaik tiek ieviesta.</p>
                         <div class="project-card__impact">
-                            <span class="project-card__metric">Lielbritānijas veikalu tīklā</span>
+                            <span class="project-card__metric">Visā Lielbritānijas veikalu tīklā</span>
                         </div>
                         <div class="project-card__tags">
                             <span class="tag">Azure</span>
-                            <span class="tag">.NET Core</span>
-                            <span class="tag">Route Optimization</span>
+                            <span class="tag">.NET 10</span>
+                            <span class="tag">Plānošana</span>
                         </div>
-                        <a class="project-card__link" href="https://www.tapi.co.uk/" target="_blank" rel="noopener noreferrer">Skatīt projektu <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
+                        <a class="project-card__link" href="https://www.tapi.co.uk/book-a-home-visit" target="_blank" rel="noopener noreferrer">Skatīt projektu <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
                     </div>
                     <div class="project-card">
                         <h3 class="project-card__title">Norvēģijas bērnu klīnikas platforma</h3>
-                        <p class="project-card__description">Kritiski svarīgu pediatrijas darbplūsmu izstrāde Norvēģijas bērnu veselības stacijām &mdash; automatizēta laboratorijas un radioloģijas atskaišu sniegšana, iedzīvotāju reģistra sinhronizācija un Digitālās grūtniecības kartes integrācija ar Helsenorge portālu.</p>
+                        <p class="project-card__description">Kritiski svarīgu pediatrijas darbplūsmu izstrāde Norvēģijas bērnu veselības stacijām &mdash; automatizēta laboratorijas un radioloģijas atskaišu sniegšana, valsts iedzīvotāju reģistra sinhronizācija un Digitālās grūtniecības kartes integrācija ar Helsenorge portālu.</p>
                         <div class="project-card__impact">
                             <span class="project-card__metric">Ieviešana visā Norvēģijā</span>
                         </div>
@@ -265,7 +289,7 @@
                         <a class="project-card__link" href="https://minflyt.no/journalsystem/helsestasjon" target="_blank" rel="noopener noreferrer">Skatīt projektu <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
                     </div>
                     <div class="project-card">
-                        <h3 class="project-card__title">Loģistikas platformas modernizācija</h3>
+                        <h3 class="project-card__title">WebSesam veselības aprūpes loģistika</h3>
                         <p class="project-card__description">Pārbūvēju mantotu veselības aprūpes loģistikas platformu par mūsdienu .NET Core un Angular lietotni, piegādājot jaunu produktu Zviedrijas tirgum.</p>
                         <div class="project-card__impact">
                             <span class="project-card__metric">Sasniegta 90% tirgus daļa Zviedrijā</span>
@@ -279,7 +303,7 @@
                     </div>
                     <div class="project-card">
                         <h3 class="project-card__title">Elektroniskās deklarēšanas sistēma (Latvija)</h3>
-                        <p class="project-card__description">Piedalījos Valsts ieņēmumu dienesta "Elektroniskās deklarēšanas sistēmas" (EDS) izstrādē un uzturēšanā.</p>
+                        <p class="project-card__description">Valsts platforma nodokļu deklarāciju iesniegšanai un apstrādei, veidota Valsts ieņēmumu dienestam.</p>
                         <div class="project-card__impact">
                             <span class="project-card__metric">Izmanto visi Latvijas nodokļu maksātāji un darba devēji</span>
                         </div>
@@ -300,17 +324,17 @@
                     <h2 class="section__title">Pieredze</h2>
                 </div>
                 <div class="timeline stagger">
-                    <!-- Gulbis Solutions -->
+                    <!-- Tapi Carpets & Floors -->
                     <div class="timeline__item">
                         <div class="timeline__dot"></div>
                         <div class="timeline__content">
                             <span class="timeline__date">2026&ndash;Tagad</span>
-                            <h3 class="timeline__title">Vecākais full-stack programmatūras inženieris un dibinātājs</h3>
-                            <span class="timeline__company">SIA &bdquo;Gulbis Solutions&ldquo; &middot; Rīga, Latvija (attālināti)</span>
+                            <h3 class="timeline__title">Vecākais full-stack programmētājs</h3>
+                            <span class="timeline__company">Tapi Carpets &amp; Floors (Lielbritānija) &middot; Rīga, Latvija (attālināti)<small class="timeline__engagement">līgumdarbs caur Gulbis Solutions</small></span>
                             <ul class="timeline__highlights" role="list">
-                                <li>Dibināju neatkarīgu programmatūras izstrādes uzņēmumu, kas sniedz līgumdarba izstrādes pakalpojumus starptautiskiem klientiem.</li>
-                                <li>Izstrādāju plānošanas un maršrutu optimizācijas sistēmas mājas vizīšu nodaļai uzņēmumā <a href="https://www.tapi.co.uk/" target="_blank" rel="noopener noreferrer">Tapi Carpets &amp; Floors<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a> (Lielbritānija) &mdash; zvanu centra tikšanos plānošana un ikdienas maršruti mājas konsultantiem visā Lielbritānijas veikalu tīklā.</li>
-                                <li>Izstrādi veicu Azure vidē ar .NET Core, Entity Framework Core un React, procesu vadot Azure DevOps.</li>
+                                <li>Izstrādāju tikšanos kalendārus un zvanu centra lietotni mājas vizīšu nodaļai visā Lielbritānijas veikalu tīklā.</li>
+                                <li>Pilotprojektā izstrādāju maršrutēšanas integrāciju ar <a href="https://www.skedulo.com/" target="_blank" rel="noopener noreferrer">Skedulo<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a> izbraukuma darbu plānošanas platformu, nododot optimizētus ikdienas maršrutus konsultantiem darba vietās.</li>
+                                <li>Izstrādi veicu Azure vidē ar .NET 10, Entity Framework Core un React, procesu vadot Azure DevOps.</li>
                             </ul>
                         </div>
                     </div>
@@ -320,7 +344,7 @@
                         <div class="timeline__content">
                             <span class="timeline__date">2024&ndash;2026</span>
                             <h3 class="timeline__title">Vecākais programmētājs</h3>
-                            <span class="timeline__company">Visma Flyt &middot; Rīga, Latvija</span>
+                            <span class="timeline__company">Visma Flyt (Norvēģija) &middot; Rīga, Latvija (hibrīddarbs)</span>
                             <ul class="timeline__highlights" role="list">
                                 <li>Veiksmīgi ieviesu <a href="https://www.helsenorge.no/en/pregnancy-and-maternity-care-in-norway/antenatal-health-card/" target="_blank" rel="noopener noreferrer">Digitālās grūtniecības kartes<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a> integrāciju, savienojot prenatālās aprūpes ierakstus ar nacionālo Helsenorge portālu.</li>
                                 <li>Veicu migrāciju uz Norvēģijas jauno nacionālo iedzīvotāju reģistru (<a href="https://www.nhn.no/tjenester/persontjenesten" target="_blank" rel="noopener noreferrer">Persontjenesten<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>), nodrošinot nepārtrauktu pacientu identifikāciju visā platformā.</li>
@@ -335,7 +359,7 @@
                         <div class="timeline__content">
                             <span class="timeline__date">2018&ndash;2024</span>
                             <h3 class="timeline__title">Vecākais programmētājs</h3>
-                            <span class="timeline__company">Visma Publitech &middot; Rīga, Latvija</span>
+                            <span class="timeline__company">Visma Publitech (Zviedrija) &middot; Rīga, Latvija (hibrīddarbs)</span>
                             <ul class="timeline__highlights" role="list">
                                 <li>Izstrādāju reāllaika noliktavas datu paneļa risinājumu, izmantojot React un .NET API.</li>
                                 <li>Pārrakstīju mantoto WebSesam lietotni par mūsdienu, responsīvu Angular un .NET SPA&mdash;sasniedzot 90% tirgus daļu Zviedrijā.</li>
@@ -415,27 +439,27 @@
                         <ul class="credentials__list" role="list">
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/ssa684zrdvke" target="_blank" rel="noopener noreferrer">AI Capabilities and Limitations (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/ssa684zrdvke" target="_blank" rel="noopener noreferrer">AI Capabilities and Limitations (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/wrxrpf8wua36" target="_blank" rel="noopener noreferrer">AI Fluency: Framework &amp; Foundations (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/wrxrpf8wua36" target="_blank" rel="noopener noreferrer">AI Fluency: Framework &amp; Foundations (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/qh86m37kmm6q" target="_blank" rel="noopener noreferrer">Introduction to Agent Skills (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/qh86m37kmm6q" target="_blank" rel="noopener noreferrer">Introduction to Agent Skills (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/srx2nott9ah3" target="_blank" rel="noopener noreferrer">Introduction to Subagents (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/srx2nott9ah3" target="_blank" rel="noopener noreferrer">Introduction to Subagents (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/ytcch4j3did5" target="_blank" rel="noopener noreferrer">Claude Code in Action (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/ytcch4j3did5" target="_blank" rel="noopener noreferrer">Claude Code in Action (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2026</span>
-                                <a class="credentials__name" href="https://verify.skilljar.com/c/4d2aqej3r458" target="_blank" rel="noopener noreferrer">Claude Code 101 (Anthropic)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://verify.skilljar.com/c/4d2aqej3r458" target="_blank" rel="noopener noreferrer">Claude Code 101 (Anthropic)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2025</span>
@@ -443,16 +467,7 @@
                             </li>
                             <li>
                                 <span class="credentials__year">2023</span>
-                                <a class="credentials__name" href="https://www.credly.com/badges/a0c8dd83-7158-483b-9798-73479edd72c0" target="_blank" rel="noopener noreferrer">Microsoft Certified: Azure Fundamentals<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="credentials__group">
-                        <h3 class="credentials__heading">Apbalvojumi</h3>
-                        <ul class="credentials__list" role="list">
-                            <li>
-                                <span class="credentials__year">2015</span>
-                                <a class="credentials__name" href="https://likta.lv/platina-pele/" target="_blank" rel="noopener noreferrer">Platīna pele 2015 &mdash; E–pārvaldes risinājumi, E–pakalpojumi sabiedrībai (LIKTA)<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://www.credly.com/badges/a0c8dd83-7158-483b-9798-73479edd72c0" target="_blank" rel="noopener noreferrer">Microsoft Certified: Azure Fundamentals<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
                             </li>
                         </ul>
                     </div>
@@ -461,15 +476,37 @@
                         <ul class="credentials__list" role="list">
                             <li>
                                 <span class="credentials__year">2012</span>
-                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=uH6opMlsEcE=&amp;t=1" target="_blank" rel="noopener noreferrer">Advancements of the Topological Functioning Model for Model Driven Architecture Approach<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=uH6opMlsEcE=&amp;t=1" target="_blank" rel="noopener noreferrer">Advancements of the Topological Functioning Model for Model Driven Architecture Approach<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2011</span>
-                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=5UR68TwdpHE=&amp;t=1" target="_blank" rel="noopener noreferrer">Towards the Refinement of Topological Class Diagram as a Platform Independent Model<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=5UR68TwdpHE=&amp;t=1" target="_blank" rel="noopener noreferrer">Towards the Refinement of Topological Class Diagram as a Platform Independent Model<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
                             </li>
                             <li>
                                 <span class="credentials__year">2011</span>
-                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=cq5BhFT2qug=&amp;t=1" target="_blank" rel="noopener noreferrer">Backward Requirements Traceability within the Topology-based Model Driven Software Development<svg class="credentials__link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                                <a class="credentials__name" href="https://www.scitepress.org/PublicationsDetail.aspx?ID=cq5BhFT2qug=&amp;t=1" target="_blank" rel="noopener noreferrer">Backward Requirements Traceability within the Topology-based Model Driven Software Development<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="credentials__group">
+                        <h3 class="credentials__heading">Personīgie projekti</h3>
+                        <ul class="credentials__list" role="list">
+                            <li>
+                                <span class="credentials__year">2026</span>
+                                <a class="credentials__name" href="https://citofact.com" target="_blank" rel="noopener noreferrer">Citofact &mdash; balto zīmolu e-rēķini<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
+                            </li>
+                            <li>
+                                <span class="credentials__year">2026</span>
+                                <a class="credentials__name" href="https://portfolio-tracker-v4.vercel.app" target="_blank" rel="noopener noreferrer">Portfolio Tracker &mdash; ieguldījumu portfeļa uzskaite<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="credentials__group">
+                        <h3 class="credentials__heading">Apbalvojumi</h3>
+                        <ul class="credentials__list" role="list">
+                            <li>
+                                <span class="credentials__year">2015</span>
+                                <a class="credentials__name" href="https://likta.lv/platina-pele/" target="_blank" rel="noopener noreferrer">Platīna pele 2015 &mdash; E–pārvaldes risinājumi, E–pakalpojumi sabiedrībai (LIKTA)<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg><span class="sr-only">(atveras jaunā cilnē)</span></a>
                             </li>
                         </ul>
                     </div>
@@ -532,6 +569,5 @@
             <p class="footer__note">Veidots ar tīru HTML, CSS un JS</p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>
